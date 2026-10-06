@@ -23,7 +23,7 @@
   --soft-2: #f0f6ff;
   --white:  #ffffff;
 
-  --font: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   --fs-display: clamp(2rem, 1.3rem + 2.5vw, 3.25rem);
   --fs-h1: clamp(2rem, 1.5rem + 2vw, 3rem);
@@ -87,12 +87,14 @@ button, input, textarea, select { font: inherit; color: inherit; }
 @media (max-width: 600px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } }
 
 /* ------------------------------------------------------------- TYPOGRAPHY */
-h1, h2, h3, h4 { font-family: var(--font); color: var(--ink); line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; }
-h1 { font-size: var(--fs-h1); }
-h2 { font-size: var(--fs-h2); }
-h3 { font-size: var(--fs-h3); line-height: 1.25; font-weight: 650; }
-p { color: var(--slate); }
-.lead { font-size: var(--fs-lead); color: var(--slate); line-height: 1.6; }
+/* Type hierarchy — consistent size / weight / colour across the site */
+h1, h2, h3, h4, h5, h6 { font-family: var(--font); color: var(--ink); letter-spacing: -0.02em; margin: 0; }
+h1 { font-size: var(--fs-h1); font-weight: 800; line-height: 1.1; }
+h2 { font-size: var(--fs-h2); font-weight: 700; line-height: 1.16; }
+h3 { font-size: var(--fs-h3); font-weight: 650; line-height: 1.28; letter-spacing: -0.015em; }
+h4 { font-size: 1.05rem; font-weight: 600; line-height: 1.35; letter-spacing: -0.01em; }
+p { color: var(--slate); font-weight: 400; }
+.lead { font-size: var(--fs-lead); color: var(--slate); line-height: 1.6; font-weight: 400; }
 
 .eyebrow {
   display: inline-block; font-size: var(--fs-xs); font-weight: 700;
